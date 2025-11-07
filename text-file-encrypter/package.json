@@ -1,0 +1,28 @@
+{
+  "name": "text-file-encrypter",
+  "version": "1.0.0",
+  "description": "A simple text file encrypter application.",
+  "main": "bin/encrypter.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "start": "node bin/encrypter.js"
+  },
+  "keywords": [
+    "encryption",
+    "decryption",
+    "files",
+    "security"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "crypto": "^1.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "jest": "^27.0.6",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.7"
+  }
+}
