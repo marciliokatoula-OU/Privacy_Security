@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="tabs">
+  <button class="tab-btn active" data-tab="gen">Generator</button>
+  <button class="tab-btn" data-tab="vault">Passwords</button>
+  <div class="spacer"></div>
+</div>
+
+<section id="tab-gen" class="tab active">
+  <h2>Password Generator</h2>
+  <div class="gen-controls">
+    <label for="length">Length</label>
+    <input id="length" type="number" min="4" max="64" value="12" />
+    <button id="generate" class="btn primary">Generate</button>
+  </div>
+  <div class="gen-output">
+    <input id="generated" type="text" readonly placeholder="Your password will appear here" />
+    <button id="copy" class="btn">Copy</button>
+  </div>
+</section>
+
+<section id="tab-vault" class="tab">
+  <h2>Your Passwords</h2>
+  <form id="add-form" class="form-grid">
+    <label>Site</label>
+    <input name="site" type="text" required />
+    <label>Login (optional)</label>
+    <input name="username" type="text" />
+    <label>Password</label>
+    <input name="password" type="text" required />
+    <button class="btn primary" type="submit">Add</button>
+  </form>
+
+  <div id="vault-list" class="list"></div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='app.js') }}" defer></script>
+{% endblock %}
