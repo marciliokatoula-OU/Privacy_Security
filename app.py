@@ -23,6 +23,7 @@ DB_PATH = os.path.join(BASE_DIR, "app.db")
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.environ.get("FLASK_SECRET", "dev-secret-change-me")
 app.config["DATABASE"] = DB_PATH
+app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 0  # Disable caching in development
 
 
 def get_db():
@@ -37,6 +38,15 @@ def close_db(exception=None):
 	db = g.pop("db", None)
 	if db is not None:
 		db.close()
+
+
+@app.after_request
+def add_header(response):
+	# Disable all caching for development
+	response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
+	response.headers["Pragma"] = "no-cache"
+	response.headers["Expires"] = "0"
+	return response
 
 
 def init_db():

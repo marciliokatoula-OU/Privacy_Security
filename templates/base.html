@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ title or 'Password Manager' }}</title>
+  <title>{{ title or 'Simply Secured' }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
 </head>
 <body>
   <header class="app-header">
     <div class="container header-inner">
-      <div class="brand">🔐 Simple Passwords</div>
+      <div class="brand"> Simply Secured 🔒</div>
       {% if session.get('username') %}
       <div class="user-actions">
         <span class="user">{{ session['username'] }}</span>
