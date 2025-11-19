@@ -1,0 +1,123 @@
+:root { 
+  --primary: #020705; 
+  --primary-dark: #000000; 
+  --bg: #f8fafc; 
+  --card: #ffffff; 
+  --muted: #6b738033; 
+  --text: #14161d; 
+  --border: #e2e8f0; 
+  --accent: #f1f5f9; 
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; }
+body { 
+  background: linear-gradient(135deg, #1c1f24 0%, #342a3f 100%); 
+  color: var(--text); 
+  font-family: 'Orbitron', 'Rajdhani', 'Share Tech Mono', 'Courier New', monospace; 
+}
+.container { max-width: 900px; margin: 0 auto; padding: 24px; }
+.app-header { 
+  background: rgba(255, 255, 255, 0.95); 
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.1); 
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+.brand { font-weight: 800; font-size: 20px; color: #282b38; letter-spacing: 2px; text-transform: uppercase; }
+.user-actions { display: flex; gap: 12px; align-items: center; }
+.user { color: var(--muted); font-size: 14px; font-weight: 500; }
+
+.auth-card { 
+  background: var(--card); 
+  border: 1px solid var(--border); 
+  border-radius: 16px; 
+  padding: 32px;
+  max-width: 420px; 
+  margin: 56px auto; 
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+}
+.auth-card h1 { margin-top: 0; color: var(--text); font-size: 28px; }
+.form-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+label { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: -8px; }
+input { 
+  background: var(--accent); 
+  border: 2px solid var(--border); 
+  color: var(--text); 
+  padding: 12px 14px; 
+  border-radius: 10px; 
+  width: 100%; 
+  font-size: 15px;
+  transition: all 0.2s;
+}
+input:focus { outline: none; border-color: var(--primary); background: white; }
+.btn { 
+  background: var(--accent); 
+  border: 2px solid var(--border); 
+  color: var(--text); 
+  padding: 12px 18px; 
+  border-radius: 10px; 
+  cursor: pointer; 
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.btn.primary { background: var(--primary); border: 2px solid var(--primary); color: white; }
+.btn:hover { transform: translateY(-1px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.btn.primary:hover { background: var(--primary-dark); border-color: var(--primary-dark); }
+.muted { color: var(--muted); font-size: 14px; }
+.muted a { color: var(--primary); text-decoration: none; font-weight: 600; }
+.muted a:hover { text-decoration: underline; }
+.alert { 
+  background: #fee2e2; 
+  border: 2px solid #fca5a5; 
+  color: #991b1b; 
+  padding: 12px 16px; 
+  border-radius: 10px; 
+  margin-bottom: 12px; 
+  font-weight: 500;
+}
+
+.tabs { display: flex; gap: 8px; align-items: center; margin: 20px 0; }
+.tab-btn { 
+  background: white; 
+  border: 2px solid var(--border); 
+  color: var(--text); 
+  padding: 12px 20px; 
+  border-radius: 10px; 
+  cursor: pointer; 
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.tab-btn:hover { background: var(--accent); }
+.tab-btn.active { background: var(--primary); border-color: var(--primary); color: white; }
+.spacer { flex: 1; }
+.tab { 
+  display: none; 
+  background: white; 
+  border: 2px solid var(--border); 
+  border-radius: 16px; 
+  padding: 28px; 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.tab.active { display: block; }
+.tab h2 { margin-top: 0; color: var(--text); font-size: 24px; }
+.gen-controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.gen-controls label { margin: 0; }
+.gen-controls input { max-width: 100px; }
+.gen-output { display: flex; gap: 12px; margin-top: 16px; }
+.gen-output input { flex: 1; font-family: 'Courier New', monospace; font-size: 16px; }
+.list { margin-top: 20px; display: grid; gap: 12px; }
+.item { 
+  display: grid; 
+  grid-template-columns: 1.2fr 1fr 1fr auto; 
+  gap: 12px; 
+  align-items: center; 
+  background: var(--accent); 
+  border: 2px solid var(--border); 
+  border-radius: 12px; 
+  padding: 14px; 
+  transition: all 0.2s;
+}
+.item:hover { box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.item strong { color: var(--text); }
+.item input { background: white; font-family: 'Courier New', monospace; }
+.item-meta { color: var(--muted); font-size: 11px; margin-top: 4px; }
