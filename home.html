@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password</title>
+    <style>
+        
+        body {
+          font-family: Arial;
+          text-align: center;
+          margin-top: 100px;
+        }
+        
+        
+        .login-box {
+            width: 300px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+       
+        .login-box input {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+            display: block;      
+            margin-bottom: 15px; 
+        }
+
+        
+        .login-box button {
+            display: block;
+            margin: 10px auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Password Generator & Storer</h1>
+
+    <div class="login-box">
+        <form action="/login" method="POST">
+
+            <label>Enter email:</label>
+            <input type="text" name="email">
+
+            <label>Enter password:</label>
+            <input type="password" name="password">
+
+            <button type="submit">login</button>
+        </form>
+    </div>
+
+    <label>or</label>
+    <br><br>
+
+    <form action="/create" method="GET">
+        <button type="submit">create account</button>
+    </form>
+
+</body>
+</html>
