@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Account</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .box {
+            width: 300px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .box input {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Add New Account</h1>
+
+<div class="box">
+
+    <form action="/save_password" method="POST">
+
+        <label>Website/App:</label><br>
+        <input type="text" name="app_name"><br>
+
+        <label>Username/Email:</label><br>
+        <input type="text" name="app_username"><br>
+
+        <label>Password:</label><br>
+        <input type="text" name="app_password"><br>
+
+        <input type="submit" value="Save">
+
+    </form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Your Saved Passwords</h2>
+
+<!-- This loops through every saved password entry and displays it -->
+{% for entry in passwords %}
+    <p><strong>Website:</strong> {{ entry['app_name'] }}</p>
+    <p><strong>Email/Username:</strong> {{ entry['app_username'] }}</p>
+    <p><strong>Password:</strong> {{ entry['app_password'] }}</p>
+    <hr>
+{% endfor %}
+
+<br><br>
+
+<form action="/add" method="GET">
+    <input type="submit" value="Add New Account">
+</form>
+
+</body>
+</html>
