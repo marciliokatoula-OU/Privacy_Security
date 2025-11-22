@@ -1,4 +1,4 @@
-# Simple Password Generator & Vault
+# Password Generator & Vault
 
 This is a minimal Flask app that lets you:
 - Create an account and sign in
